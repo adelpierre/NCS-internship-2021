@@ -16,16 +16,6 @@ The robotic head will be controlled by spiking neural networks (SNNs) running on
 <img src="Documentation/Images/RoboticHead.png" width="1000">
 Illustration 2. Robotic Head: Physical Setup
 
-
-### More information:
-- https://www.humanbrainproject.eu/en/
-- https://github.com/norse/norse
-- http://spinnakermanchester.github.io/spynnaker/5.0.0/PyNNOnSpinnakerInstall.html
-- https://spinnaker8manchester.readthedocs.io/en/master/spynnaker8/modules.html
-- http://neuralensemble.org/docs/PyNN/index.html
-- https://neurorobotics.net/local_install.html
-
-
 ### The internship work includes:
 - Literature review (cerebellum, motor cortex, visual cortex) 	
 - Design/simplification of SNNs for visuo-motor function 	
@@ -33,30 +23,24 @@ Illustration 2. Robotic Head: Physical Setup
 - Implementation of spiking models on SpiNNaker 	
 - Hardware setup (event cameras + motors + IMUs).
 
-### Student name:
-Adrien Delpierre (ajmde@kth.se)
+### Student:
+- Adrien Delpierre (ajmde@kth.se)
 
 ### Supervisor:
-Jörg Conradt (jconradt@kth.se)
+- Jörg Conradt (jconradt@kth.se)
 
 ### Co-supervisors:
 - Juan P. Romero B. (jprb@kth.se)
 - Jens E. Pedersen (jeped@kth.se)
 
-## References:
+### Resources:
+- [Zotero Collection](https://www.zotero.org/groups/2644361/ncs_delpierre/library)
+- [LaTeX document](https://www.overleaf.com/read/ngqybnswmzmh)
 
-* A. Morales-Gregorio et al., “Towards a neuronal network model of macaque visuomotor cortices,” p. 1.
-
-* S. Tolu, M. C. Capolei, L. Vannucci, C. Laschi, E. Falotico, and M. Vanegas, “A Cerebellum-Inspired Learning Approach for Adaptive and Anticipatory Control,” International Journal of Neural Systems, vol. 30, Sep. 2019, doi: 10.1142/S012906571950028X.
-
-* H. T. Kalidindi, L. Vannucci, C. Laschi, and E. Falotico, “Cerebellar adaptive mechanisms explain the optimal control of saccadic eye movements,” Bioinspir. Biomim., vol. 16, no. 1, p. 016004, Nov. 2020, doi: 10.1088/1748-3190/abae7f.
-
-* I. Abadía, F. Naveros, J. A. Garrido, E. Ros, and N. R. Luque, “On Robot Compliance: A Cerebellar Control Approach,” IEEE Transactions on Cybernetics, pp. 1–14, 2019, doi: 10.1109/TCYB.2019.2945498.
-
-* O. Rhodes et al., “Real-time cortical simulation on neuromorphic hardware,” Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences, vol. 378, no. 2164, p. 20190160, Feb. 2020, doi: 10.1098/rsta.2019.0160.
-
-* S. B. Furber, F. Galluppi, S. Temple, and L. A. Plana, “The SpiNNaker Project,” Proceedings of the IEEE, vol. 102, no. 5, pp. 652–665, May 2014, doi: 10.1109/JPROC.2014.2304638.
-
-* X. Jin, M. Lujan, L. A. Plana, S. Davies, S. Temple, and S. B. Furber, “Modeling Spiking Neural Networks on SpiNNaker,” Computing in Science Engineering, vol. 12, no. 5, pp. 91–97, Sep. 2010, doi: 10.1109/MCSE.2010.112.
-
-* S. B. Furber et al., “Overview of the SpiNNaker System Architecture,” IEEE Transactions on Computers, vol. 62, no. 12, pp. 2454–2467, Dec. 2013, doi: 10.1109/TC.2012.142.
+### More information:
+- [Buman Brain Project (HBP)](https://www.humanbrainproject.eu/en/)
+- [Norse](https://github.com/norse/norse)
+- [SpiNNaker](http://spinnakermanchester.github.io/spynnaker/5.0.0/PyNNOnSpinnakerInstall.html)
+- [SpyNNaker8](https://spinnaker8manchester.readthedocs.io/en/master/spynnaker8/modules.html)
+- [PyNN](http://neuralensemble.org/docs/PyNN/index.html)
+- [Neuro-Robotics Platform (NRP)](https://neurorobotics.net/local_install.html)
