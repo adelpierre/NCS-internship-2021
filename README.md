@@ -9,12 +9,12 @@ Computational models of the brain have so far tended to focus either on biologic
 This project aims at bringing together biologically plausible models of different brain regions (cerebellum, motor cortex, visual cortex) into a unified/simplified whole performing a visuo-motor task. In particular, a robotic head (see Illustrations 1. and 2.) with two event cameras for eyes and six servomotors allowing yaw and pitch of both eyes and neck will be used to generate saccades and produce vestibulo-ocular reflexes to detect and follow salient objects in the scene.
 
 <img src="Documentation/Images/DiagramSenActCPU.png" width="1000">
-Illustration 1. Robotic head: block diagram with sensors, actuators and computing unit
+**llustration 1.** Robotic head: block diagram with sensors, actuators and computing unit</br>
 
 The robotic head will be controlled by spiking neural networks (SNNs) running on SpiNNaker, a neuromorphic computing platform. The SNNs will integrate sensory information (visual, proprioceptive, vestibular) and will produce motor output as a response in order to perform ‘hard-coded’ pre-defined tasks. Cognitive behavior will be tackled on a second stage if time allows it. Validation of the spiking models will be done in simulation prior to be implemented on the physical setup. For that, the neurorobotics platform (NRP) will be used.
 
 <img src="Documentation/Images/RoboticHead.png" width="1000">
-Illustration 2. Robotic Head: Physical Setup
+**Illustration 2.** Robotic Head: Physical Setup</br>
 
 ### The internship work includes:
 - Literature review (cerebellum, motor cortex, visual cortex) 	
