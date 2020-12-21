@@ -1,0 +1,500 @@
+<sdf version='1.6'>
+  <model name='RobotHeadFinal'>
+    <link name='root_link'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <mass>100</mass>
+        <inertia>
+          <ixx>1.61792</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.60462</iyy>
+          <iyz>0</iyz>
+          <izz>1.61792</izz>
+        </inertia>
+      </inertial>
+      <collision name='root_link_fixed_joint_lump__RHM1_link_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://TUM_Head/collisions/COL_VIZ_RHM1_link_0_convex_hull.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='root_link_fixed_joint_lump__RHM1_link_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://TUM_Head/meshes/VIZ_RHM1_link_0.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <link name='RHM0_link'>
+      <pose frame=''>0 0 0.201153 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <mass>0.01</mass>
+        <inertia>
+          <ixx>1.61792</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.60462</iyy>
+          <iyz>0</iyz>
+          <izz>1.61792</izz>
+        </inertia>
+      </inertial>
+      <collision name='RHM0_link_collision'>
+        <pose frame=''>0 0 -0.201153 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://TUM_Head/collisions/COL_VIZ_RHM0_link_0_convex_hull.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='RHM0_link_visual'>
+        <pose frame=''>0 0 -0.201153 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://TUM_Head/meshes/VIZ_RHM0_link_0.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='RHM0_joint' type='revolute'>
+      <child>RHM0_link</child>
+      <parent>root_link</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1.5708</lower>
+          <upper>1.5708</upper>
+          <effort>100</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='SwingXAxis_link'>
+      <pose frame=''>0.067051 0 0.201153 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>-0.044701 0 0 0 -0 0</pose>
+        <mass>0.03</mass>
+        <inertia>
+          <ixx>4.85375</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>4.81457</iyy>
+          <iyz>0</iyz>
+          <izz>4.85446</izz>
+        </inertia>
+      </inertial>
+      <collision name='SwingXAxis_link_collision'>
+        <pose frame=''>-0.067051 -0 -0.201153 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://TUM_Head/collisions/COL_VIZ_SwingXAxis_link_0_convex_hull.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='SwingXAxis_link_visual'>
+        <pose frame=''>-0.067051 -0 -0.201153 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://TUM_Head/meshes/VIZ_SwingXAxis_link_0.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='SwingXAxis_joint' type='revolute'>
+      <child>SwingXAxis_link</child>
+      <parent>RHM0_link</parent>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-1.5708</lower>
+          <upper>1.5708</upper>
+          <effort>100</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='ArmLeftZAxis_link'>
+      <pose frame=''>-0.18439 0 0.201153 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0.033526 0 0.025144 0 -0 0</pose>
+        <mass>0.02</mass>
+        <inertia>
+          <ixx>3.23584</ixx>
+          <ixy>0</ixy>
+          <ixz>-1.68594e-05</ixz>
+          <iyy>3.20928</iyy>
+          <iyz>0</iyz>
+          <izz>3.23585</izz>
+        </inertia>
+      </inertial>
+      <collision name='ArmLeftZAxis_link_collision'>
+        <pose frame=''>0.18439 0 -0.201153 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://TUM_Head/collisions/COL_VIZ_ArmLeftZAxis_link_0_convex_hull.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='ArmLeftZAxis_link_visual'>
+        <pose frame=''>0.18439 0 -0.201153 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://TUM_Head/meshes/VIZ_ArmLeftZAxis_link_0.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='ArmLeftZAxis_joint' type='revolute'>
+      <child>ArmLeftZAxis_link</child>
+      <parent>SwingXAxis_link</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1.5708</lower>
+          <upper>1.5708</upper>
+          <effort>100</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='CameraMountLeftXAxis_link'>
+      <pose frame=''>-0.150865 0 0.251441 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>-0.045455 0 0 0 -0 0</pose>
+        <mass>0.11</mass>
+        <inertia>
+          <ixx>2.61792</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>2.60464</iyy>
+          <iyz>0</iyz>
+          <izz>2.61794</izz>
+        </inertia>
+      </inertial>
+      <collision name='CameraMountLeftXAxis_link_collision'>
+        <pose frame=''>0.150865 0 -0.251441 -0 -0 -0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://TUM_Head/collisions/COL_VIZ_CameraMountLeftXAxis_convex_hull.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='CameraMountLeftXAxis_link_fixed_joint_lump__cameraleft_link_collision_1'>
+        <pose frame=''>0.150865 0 -0.251441 -0 -0 -0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://TUM_Head/collisions/COL_cameraleft_convex_hull.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='CameraMountLeftXAxis_link_visual'>
+        <pose frame=''>0.150865 -0.06 -0.245 -0.251999 -0 -0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://TUM_Head/meshes/VIZ_CameraMountLeftXAxis.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='CameraMountLeftXAxis_link_fixed_joint_lump__cameraleft_link_visual_1'>
+        <pose frame=''>0.150865 -0.06 -0.245 -0.251999 -0 -0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://TUM_Head/meshes/cameraleft.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+      <self_collide>0</self_collide>
+      <sensor name='camera_dvs_right' type='camera'>
+        <visualize>1</visualize>
+        <camera name='camera_dvs_right'>
+          <horizontal_fov>1.047</horizontal_fov>
+          <image>
+            <width>128</width>
+            <height>128</height>
+          </image>
+          <clip>
+            <near>0.1</near>
+            <far>100</far>
+          </clip>
+        </camera>
+        <always_on>1</always_on>
+        <update_rate>60</update_rate>
+        <visualize>0</visualize>
+        <plugin name='camera_controller' filename='libgazebo_dvs_plugin.so'>
+          <cameraName>dvs_right</cameraName>
+          <robotNamespace>head</robotNamespace>
+          <eventThreshold>10</eventThreshold>
+          <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+        </plugin>
+        <pose frame=''>-0.05 1e-05 0 0 0 -1.5708</pose>
+      </sensor>
+    </link>
+    <joint name='CameraMountLeftXAxis_joint' type='revolute'>
+      <child>CameraMountLeftXAxis_link</child>
+      <parent>ArmLeftZAxis_link</parent>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-1.5708</lower>
+          <upper>1.5708</upper>
+          <effort>100</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='ArmRightZAxis_link'>
+      <pose frame=''>0.18439 0 0.201153 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>-0.033526 0 0.025144 0 -0 0</pose>
+        <mass>0.02</mass>
+        <inertia>
+          <ixx>3.23584</ixx>
+          <ixy>0</ixy>
+          <ixz>1.68594e-05</ixz>
+          <iyy>3.20928</iyy>
+          <iyz>0</iyz>
+          <izz>3.23585</izz>
+        </inertia>
+      </inertial>
+      <collision name='ArmRightZAxis_link_collision'>
+        <pose frame=''>-0.18439 0 -0.201153 0 0 -0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://TUM_Head/collisions/COL_VIZ_ArmRightZAxis_link_0_convex_hull.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='ArmRightZAxis_link_visual'>
+        <pose frame=''>-0.18439 0 -0.201153 0 0 -0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://TUM_Head/meshes/VIZ_ArmRightZAxis_link_0.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='ArmRightZAxis_joint' type='revolute'>
+      <child>ArmRightZAxis_link</child>
+      <parent>SwingXAxis_link</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1.5708</lower>
+          <upper>1.5708</upper>
+          <effort>100</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='CameraMountRightXAxis_link'>
+      <pose frame=''>0.150865 0 0.251441 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0.047619 5e-06 0 0 -0 0</pose>
+        <mass>0.21</mass>
+        <inertia>
+          <ixx>3.61792</ixx>
+          <ixy>-2.38095e-09</ixy>
+          <ixz>0</ixz>
+          <iyy>3.60464</iyy>
+          <iyz>0</iyz>
+          <izz>3.61794</izz>
+        </inertia>
+      </inertial>
+      <collision name='CameraMountRightXAxis_link_collision'>
+        <pose frame=''>-0.150865 -0 -0.251441 -0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://TUM_Head/collisions/COL_VIZ_CameraMountRightXAxis_convex_hull.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='CameraMountRightXAxis_link_fixed_joint_lump__cameraright_link_collision_1'>
+        <pose frame=''>-0.150865 -0 -0.251441 -0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://TUM_Head/collisions/COL_cameraright_convex_hull.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='CameraMountRightXAxis_link_visual'>
+        <pose frame=''>-0.150865 -0 -0.251441 -0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://TUM_Head/meshes/VIZ_CameraMountRightXAxis.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='CameraMountRightXAxis_link_fixed_joint_lump__cameraright_link_visual_1'>
+        <pose frame=''>-0.150865 -0 -0.251441 -0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://TUM_Head/meshes/cameraright.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+      <self_collide>0</self_collide>
+      <sensor name='camera_dvs_left' type='camera'>
+        <visualize>1</visualize>
+        <camera name='camera_dvs_left'>
+          <horizontal_fov>1.047</horizontal_fov>
+          <image>
+            <width>128</width>
+            <height>128</height>
+          </image>
+          <clip>
+            <near>0.1</near>
+            <far>100</far>
+          </clip>
+        </camera>
+        <always_on>1</always_on>
+        <update_rate>60</update_rate>
+        <visualize>0</visualize>
+        <plugin name='camera_controller' filename='libgazebo_dvs_plugin.so'>
+          <cameraName>dvs_left</cameraName>
+          <robotNamespace>head</robotNamespace>
+          <eventThreshold>10</eventThreshold>
+          <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+        </plugin>
+        <pose frame=''>0.05 1e-05 0 0 0 -1.5708</pose>
+      </sensor>
+    </link>
+    <joint name='CameraMountRightXAxis_joint' type='revolute'>
+      <child>CameraMountRightXAxis_link</child>
+      <parent>ArmRightZAxis_link</parent>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-1.5708</lower>
+          <upper>1.5708</upper>
+          <effort>100</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <static>0</static>
+    <plugin name='generic_controller' filename='libgeneric_controller_plugin.so'>
+      <controller joint_name='RHM1_joint'>
+        <type>position</type>
+        <pid>20 2 30</pid>
+      </controller>
+      <controller joint_name='RHM0_joint'>
+        <type>position</type>
+        <pid>20 2 30</pid>
+      </controller>
+      <controller joint_name='SwingXAxis_joint'>
+        <type>position</type>
+        <pid>20 2 30</pid>
+      </controller>
+      <controller joint_name='ServoLeft_joint'>
+        <type>position</type>
+        <pid>20 2 30</pid>
+      </controller>
+      <controller joint_name='ArmLeftZAxis_joint'>
+        <type>position</type>
+        <pid>20 2 30</pid>
+      </controller>
+      <controller joint_name='CameraMountLeftServo_joint'>
+        <type>position</type>
+        <pid>20 2 30</pid>
+      </controller>
+      <controller joint_name='CameraMountLeftXAxis_joint'>
+        <type>position</type>
+        <pid>20 2 30</pid>
+      </controller>
+      <controller joint_name='cameraleft_joint'>
+        <type>position</type>
+        <pid>20 2 30</pid>
+      </controller>
+      <controller joint_name='ServoRight_joint'>
+        <type>position</type>
+        <pid>20 2 30</pid>
+      </controller>
+      <controller joint_name='ArmRightZAxis_joint'>
+        <type>position</type>
+        <pid>20 2 30</pid>
+      </controller>
+      <controller joint_name='CameraMountRightServo_joint'>
+        <type>position</type>
+        <pid>20 2 30</pid>
+      </controller>
+      <controller joint_name='CameraMountRightXAxis_joint'>
+        <type>position</type>
+        <pid>20 2 30</pid>
+      </controller>
+      <controller joint_name='cameraright_joint'>
+        <type>position</type>
+        <pid>20 2 30</pid>
+      </controller>
+    </plugin>
+  </model>
+</sdf>
