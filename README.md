@@ -38,7 +38,7 @@ Illustration 2. Robotic Head: Physical Setup
 - [LaTeX document](https://www.overleaf.com/read/ngqybnswmzmh)
 
 ### More information:
-- [Buman Brain Project (HBP)](https://www.humanbrainproject.eu/en/)
+- [Human Brain Project (HBP)](https://www.humanbrainproject.eu/en/)
 - [Norse](https://github.com/norse/norse)
 - [SpiNNaker](http://spinnakermanchester.github.io/spynnaker/5.0.0/PyNNOnSpinnakerInstall.html)
 - [SpyNNaker8](https://spinnaker8manchester.readthedocs.io/en/master/spynnaker8/modules.html)
