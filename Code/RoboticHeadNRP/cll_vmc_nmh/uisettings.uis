@@ -188,20 +188,20 @@
       },
       "content": [
         {
-          "type": "column",
+          "type": "row",
           "isClosable": true,
           "reorderEnabled": true,
           "title": "",
-          "width": 50,
+          "height": 20.000000000000014,
           "content": [
             {
               "type": "stack",
-              "width": 100,
+              "width": 38.62070985793347,
               "isClosable": true,
               "reorderEnabled": true,
               "title": "",
               "activeItemIndex": 0,
-              "height": 77.60358342665174,
+              "height": 78.95457031479614,
               "content": [
                 {
                   "type": "component",
@@ -222,62 +222,53 @@
               ]
             },
             {
-              "type": "row",
+              "type": "stack",
+              "header": {},
               "isClosable": true,
               "reorderEnabled": true,
               "title": "",
-              "height": 22.39641657334826,
+              "activeItemIndex": 0,
+              "width": 31.63584056249943,
               "content": [
                 {
-                  "type": "stack",
-                  "header": {},
+                  "type": "component",
+                  "title": "Robot Camera Rendering",
+                  "id": "robot-camera-rendering",
+                  "componentName": "angularModuleComponent",
+                  "componentState": {
+                    "module": "environmentRenderingModule",
+                    "angularDirective": "<environment-rendering />"
+                  },
+                  "pwidth": 300,
+                  "pheight": 200,
                   "isClosable": true,
-                  "reorderEnabled": true,
-                  "title": "",
-                  "activeItemIndex": 0,
-                  "height": 50,
-                  "width": 50,
-                  "content": [
-                    {
-                      "type": "component",
-                      "title": "Robot Camera Rendering",
-                      "id": "robot-camera-rendering",
-                      "componentName": "angularModuleComponent",
-                      "componentState": {
-                        "module": "environmentRenderingModule",
-                        "angularDirective": "<environment-rendering />"
-                      },
-                      "pwidth": 300,
-                      "pheight": 200,
-                      "isClosable": true,
-                      "reorderEnabled": true
-                    }
-                  ]
-                },
+                  "reorderEnabled": true
+                }
+              ]
+            },
+            {
+              "type": "stack",
+              "header": {},
+              "isClosable": true,
+              "reorderEnabled": true,
+              "title": "",
+              "activeItemIndex": 0,
+              "width": 29.743449579567088,
+              "height": 100,
+              "content": [
                 {
-                  "type": "stack",
-                  "header": {},
+                  "type": "component",
+                  "title": "Robot Camera Rendering",
+                  "id": "robot-camera-rendering",
+                  "componentName": "angularModuleComponent",
+                  "componentState": {
+                    "module": "environmentRenderingModule",
+                    "angularDirective": "<environment-rendering />"
+                  },
+                  "pwidth": 300,
+                  "pheight": 200,
                   "isClosable": true,
-                  "reorderEnabled": true,
-                  "title": "",
-                  "activeItemIndex": 0,
-                  "width": 50,
-                  "content": [
-                    {
-                      "type": "component",
-                      "title": "Robot Camera Rendering",
-                      "id": "robot-camera-rendering",
-                      "componentName": "angularModuleComponent",
-                      "componentState": {
-                        "module": "environmentRenderingModule",
-                        "angularDirective": "<environment-rendering />"
-                      },
-                      "pwidth": 300,
-                      "pheight": 200,
-                      "isClosable": true,
-                      "reorderEnabled": true
-                    }
-                  ]
+                  "reorderEnabled": true
                 }
               ]
             }

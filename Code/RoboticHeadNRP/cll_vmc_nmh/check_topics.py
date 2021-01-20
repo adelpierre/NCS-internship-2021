@@ -7,7 +7,7 @@ import thread
 import time
 import math
 
-from std_msgs.msg import Float64
+from std_msgs.msg import Float64, Float32
 from sensor_msgs.msg import JointState
 from dvs_msgs.msg import EventArray
 
@@ -80,6 +80,9 @@ if __name__ == "__main__":
     reye_lr = rospy.Publisher('/robot/ArmLeftZAxis_joint/cmd_pos', Float64, queue_size=1)
     leye_ud = rospy.Publisher('/robot/CameraMountRightXAxis_joint/cmd_pos', Float64, queue_size=1)
     reye_ud = rospy.Publisher('/robot/CameraMountLeftXAxis_joint/cmd_pos', Float64, queue_size=1)
+    ball_x_speed = rospy.Publisher('/x_speed', Float32, queue_size=1)
+    ball_y_speed = rospy.Publisher('/y_speed', Float32, queue_size=1)
+    ball_z_speed = rospy.Publisher('/z_speed', Float32, queue_size=1)
 
     # Create subscribers, one for each sensor
     jstates = rospy.Subscriber('/robot/joint_states', JointState, cbJointState, buff_size=1)
@@ -106,68 +109,85 @@ if __name__ == "__main__":
 
         # Moving Head RIGHT and LEFT
         head_lr.publish(-max_h_yaw)
+        ball_y_speed.publish(0.5)
         time.sleep(t) # Wait for t seconds (to see motion)
         print(pos) # Check current positions
 
         head_lr.publish(max_h_yaw)
+        ball_y_speed.publish(-0.5)
         time.sleep(2*t) # Wait for 2*t seconds (to see motion)
         print(pos) # Check current positions
 
         head_lr.publish(0)
+        ball_y_speed.publish(0.5)
         time.sleep(t) # Wait for t seconds (to see motion)
         print(pos) # Check current positions
+        ball_y_speed.publish(0.0)
 
         # Moving Head UP and DOWN
         head_ud.publish(-max_h_pitch)
+        ball_z_speed.publish(0.5)
         time.sleep(t) # Wait for t seconds (to see motion)
         print(pos) # Check current positions
 
         head_ud.publish(max_h_pitch)
+        ball_z_speed.publish(-0.5)
         time.sleep(2*t) # Wait for 2*t seconds (to see motion)
         print(pos) # Check current positions
 
         head_ud.publish(0)
+        ball_z_speed.publish(0.5)
         time.sleep(t) # Wait for t seconds (to see motion)
         print(pos) # Check current positions
+        ball_z_speed.publish(0.0)
 
         # Moving Both Eyes RIGHT and LEFT
         leye_lr.publish(-max_e_yaw)
         reye_lr.publish(-max_e_yaw)
+        ball_y_speed.publish(0.5)
         time.sleep(t) # Wait for t seconds (to see motion)
         print(pos) # Check current positions
 
         leye_lr.publish(max_e_yaw)
         reye_lr.publish(max_e_yaw)
+        ball_y_speed.publish(-0.5)
         time.sleep(2*t) # Wait for 2*t seconds (to see motion)
         print(pos) # Check current positions
 
         leye_lr.publish(0)
         reye_lr.publish(0)
+        ball_y_speed.publish(0.5)
         time.sleep(t) # Wait for t seconds (to see motion)
         print(pos) # Check current positions
+        ball_y_speed.publish(0.0)
 
         # Moving Both Eyes UP and DOWN
         leye_ud.publish(-max_e_pitch)
         reye_ud.publish(-max_e_pitch)
+        ball_z_speed.publish(0.1)
         time.sleep(t) # Wait for t seconds (to see motion)
         print(pos) # Check current positions
 
         leye_ud.publish(max_e_pitch)
         reye_ud.publish(max_e_pitch)
+        ball_z_speed.publish(-0.1)
         time.sleep(2*t) # Wait for 2*t seconds (to see motion)
         print(pos) # Check current positions
 
         leye_ud.publish(0)
         reye_ud.publish(0)
+        ball_z_speed.publish(0.1)
         time.sleep(t) # Wait for t seconds (to see motion)
         print(pos) # Check current positions
+        ball_z_speed.publish(0.0)
 
 
     # CLOSED LOOP: with sensory feedback (subscribers are necessary)
     if closed_loop:
 
         # USE SENSORY FEEDBACK TO CONTROL MOTION
-        # ...
+        print(jstates)
+        print(JointState)
         # ...
         # ...
         # ...
