@@ -1,0 +1,6 @@
+<ns1:bibi
+  xmlns:ns1="http://schemas.humanbrainproject.eu/SP10/2014/BIBI"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ns1:bodyModel robotId="robot">TUM_Head/RobotHead.sdf</ns1:bodyModel>
+  <ns1:bodyModel robotId="ball">rh_ball/ball_rh.sdf</ns1:bodyModel>
+</ns1:bibi>

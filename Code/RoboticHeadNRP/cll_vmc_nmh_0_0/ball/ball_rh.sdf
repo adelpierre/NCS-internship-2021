@@ -1,0 +1,29 @@
+<?xml version="1.0"?> 
+<sdf version="1.6">
+
+    <model name="ball">
+      <pose>0 0 0.0 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+		<sphere>
+			<radius>0.25</radius>
+		</sphere>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+		<sphere>
+			<radius>0.25</radius>
+		</sphere>
+          </geometry>
+        </visual>
+	<gravity>0</gravity>
+      </link>
+
+      <plugin name="rh_ball_model_push_plugin" filename="librh_ball_model_push_plugin.so"/>
+    </model>        
+
+</sdf>
+
