@@ -12,6 +12,7 @@ def create_weights(
     weight_TN_recurrent = 1,
     weight_TN_MN = 1
 ):
+    "Returns an array of weigths"
     weight_matrix = [weight_fovea, weight_to_LLBN, weight_LLBN_input, weight_LLBN_recurrent, weight_to_EBN, weight_LLBN_EBN, 
                      weight_EBN_IFN, weight_IFN_LLBN, weight_EBN_TN, weight_TN_input, weight_TN_recurrent, weight_TN_MN]
     return weight_matrix

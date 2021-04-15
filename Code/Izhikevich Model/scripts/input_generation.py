@@ -2,6 +2,7 @@ import numpy as np
 import math
 
 def set_params(x, y, duration, dt):
+    "Set the parameters of the simulation"
     if x!=y :
         nb_samples = int((max(x,y) - 1)/2)
     else:
@@ -33,16 +34,24 @@ def input_generator(
     if input_type == "movement":
         for i in range(nb_samples):
             if mvt_type == "up":
+                #Construction of the frame containing the object
                 sim_input[i+1,pos_ini[0]-os[0]//2-i:pos_ini[0]+math.ceil(os[0]/2)-i,pos_ini[1]-math.ceil(os[1]//2):pos_ini[1]+math.ceil(os[1]/2)] += objects
+                #Construction of the frame of difference
                 dvs_output[i]=abs(sim_input[i+1]-sim_input[i])
             elif mvt_type == "down":
+                #Construction of the frame containing the object
                 sim_input[i+1,pos_ini[0]-os[0]//2+i:pos_ini[0]+math.ceil(os[0]/2)+i,pos_ini[1]-math.ceil(os[1]//2):pos_ini[1]+math.ceil(os[1]/2)] += objects
+                #Construction of the frame of difference
                 dvs_output[i]=abs(sim_input[i+1]-sim_input[i])
             elif mvt_type == "left":
+                #Construction of the frame containing the object
                 sim_input[i+1,pos_ini[0]-os[0]//2:pos_ini[0]+math.ceil(os[0]/2),pos_ini[1]-math.ceil(os[1]//2)-i:pos_ini[1]+math.ceil(os[1]/2)-i] += objects
+                #Construction of the frame of difference
                 dvs_output[i]=abs(sim_input[i+1]-sim_input[i])
             elif mvt_type == "right":
+                #Construction of the frame containing the object
                 sim_input[i+1,pos_ini[0]-os[0]//2:pos_ini[0]+math.ceil(os[0]/2),pos_ini[1]-math.ceil(os[1]//2)+i:pos_ini[1]+math.ceil(os[1]/2)+i] += objects
+                #Construction of the frame of difference
                 dvs_output[i]=abs(sim_input[i+1]-sim_input[i])
             else:
                 raise Exception("Wrong movement type, please use up, down, left or right")
@@ -52,16 +61,24 @@ def input_generator(
             t_2 = nb_samples
         for i in range(t_2):
             if mvt_type == "up":
+                #Construction of the frame containing the object
                 sim_input[i+1,pos_ini[0]-os[0]//2-i:pos_ini[0]+math.ceil(os[0]/2)-i,pos_ini[1]-math.ceil(os[1]//2):pos_ini[1]+math.ceil(os[1]/2)] += objects
+                #Construction of the frame of difference
                 dvs_output[i]=abs(sim_input[i+1]-sim_input[i])
             elif mvt_type == "down":
+                #Construction of the frame containing the object
                 sim_input[i+1,pos_ini[0]-os[0]//2+i:pos_ini[0]+math.ceil(os[0]/2)+i,pos_ini[1]-math.ceil(os[1]//2):pos_ini[1]+math.ceil(os[1]/2)] += objects
+                #Construction of the frame of difference
                 dvs_output[i]=abs(sim_input[i+1]-sim_input[i])
             elif mvt_type == "left":
+                #Construction of the frame containing the object
                 sim_input[i+1,pos_ini[0]-os[0]//2:pos_ini[0]+math.ceil(os[0]/2),pos_ini[1]-math.ceil(os[1]//2)-i:pos_ini[1]+math.ceil(os[1]/2)-i] += objects
+                #Construction of the frame of difference
                 dvs_output[i]=abs(sim_input[i+1]-sim_input[i])
             elif mvt_type == "right":
+                #Construction of the frame containing the object
                 sim_input[i+1,pos_ini[0]-os[0]//2:pos_ini[0]+math.ceil(os[0]/2),pos_ini[1]-math.ceil(os[1]//2)+i:pos_ini[1]+math.ceil(os[1]/2)+i] += objects
+                #Construction of the frame of difference
                 dvs_output[i]=abs(sim_input[i+1]-sim_input[i])
             else:
                 raise Exception("Wrong movement type, please use up, down, left or right")

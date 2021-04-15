@@ -1,6 +1,7 @@
 import numpy as np
 
-def convertSpikesToVoltage(spikes):
+def convertSpikesToVoltage(spikes,v_max = 5):
+    "Convert an array of spikes to a voltage value comprised between 0 and v_max"
     n = spikes.shape[0]
-    v = 5*spikes.sum()/n
+    v = v_max*spikes.sum()/n
     return(v)
