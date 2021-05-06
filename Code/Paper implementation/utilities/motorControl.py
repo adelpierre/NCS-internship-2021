@@ -1,7 +1,8 @@
 import numpy as np
+import math
 
-def convertSpikesToVoltage(spikes,v_max = 5, offset = 0):
+def convertSpikesToAngle(spikes,a_max = math.pi, offset = 0):
     "Convert an array of spikes to a voltage value comprised between 0 and v_max"
     n = spikes.shape[0]
-    v = v_max*spikes.sum()/n + offset
-    return(v)
+    a = a_max*spikes.sum()/n + offset
+    return(a)

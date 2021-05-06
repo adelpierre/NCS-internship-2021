@@ -1,3 +1,15 @@
+import numpy as np
+
+def create_weights_fovea(x,y):
+    weights_ini_up = np.zeros((x,y))
+    weights_ini_down = np.zeros((x,y))
+    for i in range(x):
+        if i <= (x-1)/2 :
+            weights_ini_up[i,:]+=(1-(2*i/(x-1)))
+        else :
+            weights_ini_down[i,:]+=(2*(i-(x-1)/2)/(x-1))
+    return weights_ini_up,weights_ini_down
+
 def create_weights(
     weight_fovea,
     weight_to_LLBN = 1,
