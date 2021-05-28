@@ -7,11 +7,11 @@ import sys
 import norse.torch as norse
 from time import perf_counter
 from array2gif import write_gif
-import scripts
-from scripts.input_generation import *
-from scripts.visualization import *
-from scripts.cib import *
-from scripts.weights import *
+import utilities
+from utilities.input_generation import *
+from utilities.visualization import *
+from utilities.cib import *
+from utilities.weights import *
 
 #Import of the Izhikevich module and functions from Norse
 from norse.torch.module import izhikevich as izk
